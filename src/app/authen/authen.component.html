@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-7">
+        <div class="col-lg-10 mx-auto">
+            <div class="authen_header">
+                <img src="" alt="">
+                <h1> RTT </h1>
+                <p class="rttsub1 text-danger"> Rak Tak Transfert </p>
+                <p class="rttsub2"> Jugez par vous meme </p>
+            </div>
+    
+            <p class="authent_desc mt-5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis accusantium nulla debitis facilis fugiat! Eius, iusto, temporibus animi, nam obcaecati voluptatem nostrum aliquam enim aut libero quam non explicabo earum!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis accusantium nulla debitis facilis fugiat! Eius, iusto, temporibus animi, nam obcaecati voluptatem nostrum aliquam enim aut libero quam non explicabo earum!
+            </p>
+        </div>
+    </div>
+    <div style="padding: 50px 0px 0px 0px;" id="right_zone" class="col-sm-5">
+        
+        <!--  (ngSubmit)="authensubmit(f)" #f="ngForm" -->
+
+        <form id="authen_form" class="col-sm-12 col-lg-8 mx-auto">
+            <p style="font-size: 20px" class="text-light"> Veillez vous authentifier pour acceder a la plateforme</p> <hr style="background-color: #dbdbdb"> 
+            <div class="form-group">
+                <label class="text-light" for="username"> username </label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="authentformdata.username" >
+            </div>
+
+            <div class="form-group">
+                <label class="text-light" for="password"> Password </label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="authentformdata.password">
+            </div>
+
+            <button (click)="authensubmit()" class="btn btn-light"> Submit </button>
+            <br>
+            <br>
+            <a class="text-light" routerLink="listpartenaire"> skip the form ... </a>
+            <br>
+        </form>
+    </div>
+</div>

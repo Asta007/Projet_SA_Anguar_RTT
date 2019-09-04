@@ -1,0 +1,43 @@
+<div class="row">
+    <div style="padding:0px;" class="col-sm-3 col-lg-2">
+        <app-sidebar> </app-sidebar>
+    </div>
+  
+    <div class="nonesidebar col-sm-9 col-lg-10">
+      <div id="content-compte" class="">
+        <h3> Liste Partenaires </h3>
+        <br>
+        <br>
+          <a routerLink="/listrouge"> <img src="../../assets/img/redlist.png" width="23px" alt=""> Afficher la liste Rouge </a> <br>
+          <a routerLink="/ajoutpartenaire" id="btn_ajout" class="text-info"> <img src="../../assets/img/add.png" width="25px" alt=""> Ajouter </a>
+          
+          <p style="float:right;"> Totale : {{ partlenght }}</p>
+    
+        <table id="table" class="table table-condensed table-striped table-bordered">
+          <tr>
+            <th> Id </th>
+            <th> Matricule </th>
+            <th> Dénomination </th>
+            <th> Adress </th>
+            <th> Email </th>
+            <th> Telephone </th>
+            <th> Action </th>
+          </tr>
+
+          <tr *ngFor="let onepart of partdata">
+            <td> {{onepart.id}} </td>
+            <td> {{onepart.matricule}} </td>
+            <td> {{onepart.denomination}} </td>
+            <td> {{onepart.adressePrest}} </td>
+            <td> {{onepart.emailPrest}} </td>
+            <td> {{onepart.contactePrest}} </td>
+            <td>
+                <a [routerLink]="['/listpartenaire',onepart.id]" class="mr-1 btn btn-success"> <img src="../../assets/img/view.png" width="20px" alt=""> Afficher </a>
+            </td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+  
+  </div>

@@ -1,0 +1,9 @@
+#btn_ajout{
+    margin-bottom: 15px;
+    float: left;
+}
+
+#table tr td a{
+    margin-left: 2px;
+    margin-right: 2px;
+}

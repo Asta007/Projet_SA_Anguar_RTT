@@ -1,0 +1,10 @@
+#response{
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color:#fff;
+    border-radius: 5px;
+    opacity: 0.8;
+    animation: shake 1s 1;
+}

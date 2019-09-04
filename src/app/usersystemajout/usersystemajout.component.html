@@ -1,0 +1,89 @@
+<div class="row">
+    <div style="padding:0px;" class="col-sm-3 col-lg-2">
+        <app-sidebar> </app-sidebar>
+    </div>
+
+    <div class="nonesidebar col-sm-9 col-lg-10">
+        <p class="title"> Ajout D'utilisateur <span class="small"> (system)</span> </p>
+        
+        <div class="row col-lg-11 mx-auto">
+          <form class="col-lg-6" (ngSubmit)="usersysubmit(f)" #f="ngForm" >
+            <div class="card">
+              <p class="card-header"> veillez renseigner le formulaires </p>
+              
+              <div class="card-content p-3">
+
+                  <div class="row">
+                    
+                    <div class="form-group col-5 mx-auto">
+                      <label for=""> Nom : </label>
+                      <input type="text" class="form-control" name="nom" ngModel>
+                    </div>
+                    
+                    <div class="form-group col-5 mx-auto">
+                      <label for=""> Prenom : </label>
+                      <input type="text" class="form-control" name="prenom" ngModel>
+                    </div>
+                    
+                  </div>
+                  
+                    
+                  <div class="row">
+                    
+                    <div class="form-group col-5 mx-auto">
+                      <label for="telephone"> telephone : </label>
+                      <input type="number" class="form-control" id="telephone" name="telephone" ngModel>
+                    </div>
+                    
+                    <div class="form-group col-5 mx-auto">
+                      <label for="email"> email : </label>
+                      <input type="text" class="form-control" id="email" name="email" ngModel>
+                    </div>
+                    
+                  </div>
+              
+                  <div class="form-group">
+                    <label for=""> mot de passe : </label>
+                    <input type="password" class="form-control" name="password" ngModel>
+                  </div>
+                  
+                  <div class="row pl-4">
+                    <div class="form-group mr-5">
+                      <input checked class="mr-1" name="roles" id="admin" type="radio" value="11" ngModel>
+                      <label  class="mr-3" for="admin"> Admin</label>
+
+                      <input class="mr-1" name="roles" id="caissier" type="radio" value="12" ngModel>
+                      <label  class="mr-3" for="caissier"> Caissier</label>
+                    </div>
+                  </div>
+                  
+                  <div style="text-align: right">
+                    <input type="submit" value="Ajouter" class="btn btn-success">
+                  </div>
+
+            </div>
+            </div>
+            <div *ngIf="myresp.status == 200" id="response" class="bg-success">
+              <span > {{ myresp.text }}  teste </span>
+            </div>
+          
+            <div *ngIf="myresp.status == 500" id="response" class="bg-danger">
+              <span > {{ myresp.text }} </span>
+            </div>
+          
+          </form>
+
+          <div class="col-lg-5 mt-5">
+              <p>
+                <strong> Droit D'un Admin </strong> <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse accusantium, id dolorem asperiores ad architecto distinctio autem labore placeat mollitia temporibus quisquam corporis iure blanditiis nisi eaque animi voluptate error.
+              </p>
+              <br>
+              <p>
+                <strong> Rôle D'un Caissier </strong> <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse accusantium, id dolorem asperiores ad architecto distinctio autem labore placeat mollitia temporibus quisquam corporis iure blanditiis nisi eaque animi voluptate error.
+              </p>
+
+          </div>
+        </div>
+    </div>

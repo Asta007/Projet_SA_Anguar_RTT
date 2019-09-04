@@ -1,0 +1,26 @@
+#right_zone{
+    /* background: #c00000; */
+    height:100vh;
+}
+
+.authen_header{
+    padding-top: 25px;
+}
+
+.authen_header h1{
+    color:#c00000;
+    font-weight: bold;
+    margin: 0px;
+    font-size: 60px;
+}
+
+.authen_header p{
+    font-weight: bold;
+    margin: 0px;
+}
+
+@media(max-width:578px){
+    #right_zone{
+        height:auto;
+    }
+}

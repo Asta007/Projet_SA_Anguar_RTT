@@ -1,0 +1,37 @@
+<div class="row">
+  <div style="padding:0px;" class="col-sm-3 col-lg-2">
+      <app-sidebar> </app-sidebar>
+  </div>
+
+  <div class="nonesidebar col-sm-9 col-lg-10">
+    <div id="content-compte" class="">
+      <h3> List Comptes </h3>
+      <br>
+      <br>
+
+      <p> Total : {{ comptelenght }} </p>
+  
+      <table id="table" class="table table-condensed table-striped table-bordered">
+        <tr>
+          <th> Id </th>
+          <th> Intitulé </th>
+          <th> prestataire associé </th>
+          <th> Solde </th>
+          <th> Action </th>
+        </tr>
+
+        <tr *ngFor="let onecompte of comptedata" >
+          <th> {{onecompte.id}} </th>
+          <th> {{onecompte.intitule}} </th>
+          <th> {{onecompte.prestataire}} </th>
+          <th> {{onecompte.solde}} </th>
+          <th> <button routerLink="/onecompte" class="btn btn-success"> <img src="../../assets/img/view.png" width="20px" alt=""> </button> </th>
+        </tr>
+          
+      </table>
+
+      
+    </div>
+  </div>
+
+</div>

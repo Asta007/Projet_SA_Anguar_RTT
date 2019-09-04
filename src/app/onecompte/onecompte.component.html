@@ -1,0 +1,110 @@
+<div class="row">
+    <div style="padding:0px;" class="col-sm-3 col-lg-2">
+        <app-sidebar> </app-sidebar>
+    </div>
+  
+    <div class="nonesidebar col-sm-9 col-lg-10 p-4">
+      <p class="title">
+        Bakh Yaye Solution
+      </p>
+
+      <a routerLink="/list-compte" class="retour"> Retour a la liste </a>
+      <br>
+      <br>
+      <form class="col-md-10">
+          <label for=""> Montant </label>
+          <div class="input-group">
+            <input type="text" class="form-control">
+            
+            <div class="input-group-append">
+              <button class="btn btn-default"> Deposer </button>
+            </div>
+          </div>
+          <label>
+              <span class="small text-muted p-0">
+                veillez indiquer le Montant a deposer sur le compte <br>
+                le depot d'argent permettent a nos agent partenaire de faire des transactions
+              </span>
+          </label>
+      </form>
+
+      <div class="row col-md-10">
+        <div class="table_title">
+          <p> Info Complete </p> 
+        </div>
+        <table id="table" class="ml-3 table table-condensed table-striped table-bordered">
+            <tr>
+              <th> Id </th>
+              <th> Matricule </th>
+              <th> Dénomination </th>
+              <th> Adress </th>
+              <th> Email </th>
+              <th> Telephone </th>
+              <th> Action </th>
+            </tr>
+            <tr>
+              <td> 01 </td>
+              <td> 65465 </td>
+              <td> Bakh Yaya Solution </td>
+              <td> Pikine </td>
+              <td> bys@gmail.com </td>
+              <td> 7845687 </td>
+              <td> <a routerLink="compte-list" class="btn btn-danger"> bloquer </a> </td>
+            </tr>
+            
+        </table>
+      </div>
+
+      <div class="row col-md-10">
+            <div class="table_title">
+              <p> Historique de Transactions </p> 
+            </div>
+            <table id="table" class="ml-3 table table-condensed table-striped table-bordered">
+                <tr>
+                  <th> Id </th>
+                  <th> Matricule </th>
+                  <th> Dénomination </th>
+                  <th> date </th>
+                  <th> transaction </th>
+                  <th> montant </th>
+                </tr>
+
+                <tr>
+                  <td> 01 </td>
+                  <td> 65465 </td>
+                  <td> Bakh Yaya Solution </td>
+                  <td> 12/05/98 </td>
+                  <td> depot  </td>
+                  <td> 75000 </td>
+                </tr>
+                
+                <tr>
+                  <td> 01 </td>
+                  <td> 65465 </td>
+                  <td> Bakh Yaya Solution </td>
+                  <td> 12/05/98 </td>
+                  <td> depot  </td>
+                  <td> 75000 </td>
+                </tr>
+                
+                <tr>
+                  <td> 01 </td>
+                  <td> 65465 </td>
+                  <td> Bakh Yaya Solution </td>
+                  <td> 12/05/98 </td>
+                  <td> depot  </td>
+                  <td> 75000 </td>
+                </tr>
+                
+                <tr>
+                  <td> 01 </td>
+                  <td> 65465 </td>
+                  <td> Bakh Yaya Solution </td>
+                  <td> 12/05/98 </td>
+                  <td> depot  </td>
+                  <td> 75000 </td>
+                </tr>
+                
+            </table>
+      </div>
+    </div>

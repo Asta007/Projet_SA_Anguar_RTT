@@ -1,0 +1,79 @@
+<div class="row">
+  <div style="padding:0px;" class="col-sm-3 col-lg-2">
+      <app-sidebar> </app-sidebar>
+  </div>
+
+  <div class="nonesidebar col-sm-9 col-lg-10">
+    <div id="content-compte" class="">
+      <h3> Nom de Famille : <strong> {{ oneuserpartdata.nom }} </strong> </h3>
+      
+      <p *ngIf="oneuserpartdata.statusUser === 'blked'"> <span class="oui text-danger"> Bloqué </span> </p>
+      <p *ngIf="oneuserpartdata.statusUser === 'dblked'"> <span class="non text-success"> Actif </span> </p>
+      <p *ngIf="oneuserpartdata.statusUser === 'blcked'"> <span class="oui text-danger"> Bloqué </span> </p>
+      <p *ngIf="oneuserpartdata.statusUser === 'dblcked'"> <span class="non text-success"> Actif </span> </p>
+
+        <a routerLink="/userpartlist" class="text-info"> Retour a la liste  </a>
+  
+     <div class="row col-md-8">
+      <table id="table" class="table table-condensed table-striped table-bordered">
+        
+        <tr>
+          <th> Id </th>
+          <td> {{ oneuserpartdata.id }} </td>
+        </tr>
+
+        <tr>
+          <th> prestataire </th>
+          <td> {{ oneuserpartdata.prestataire.matricule }} </td>
+        </tr>
+        
+        <tr>
+          <th> Compte Associé </th>
+          <td> {{ oneuserpartdata.compteAssocie.intitule }} </td>
+        </tr>
+
+        <tr>
+          <th> email </th>
+          <td> {{ oneuserpartdata.id }} </td>
+        </tr>
+
+        <tr>
+          <th> Nom </th>
+          <td> {{ oneuserpartdata.nom }} </td>
+        </tr>
+
+        <tr>
+          <th> Prenom </th>
+          <td> {{ oneuserpartdata.prenom }} </td>
+        </tr>
+
+        <tr>
+          <th> Cni </th>
+          <td> {{ oneuserpartdata.cni }} </td>
+        </tr>
+
+        <tr>
+          <th> Adresse  </th>
+          <td> {{ oneuserpartdata.adresseUser }} </td>
+        </tr>
+
+        <tr>
+          <th> telephone </th>
+          <td> {{ oneuserpartdata.telephoneUser }} </td>
+        </tr>
+
+        <tr>
+          <th> Action </th>
+          <button *ngIf="oneuserpartdata.statusUser === 'blked'" class="btn btn-success"> <img src="../../assets/img/stick.png" width="20px" alt=""> <span class="text-light"> Debloquer </span> </button>
+          <button *ngIf="oneuserpartdata.statusUser === 'dblked'" class="btn btn-danger"> <img src="../../assets/img/croi.png" width="20px" alt=""> <span class="text-light"> Bloquer </span> </button>
+          
+          <button *ngIf="oneuserpartdata.statusUser === 'blcked'" class="btn btn-success"> <img src="../../assets/img/stick.png" width="20px" alt=""> <span class="text-light"> Debloquer </span> </button>
+          <button *ngIf="oneuserpartdata.statusUser === 'dblcked'" class="btn btn-danger"> <img src="../../assets/img/croi.png" width="20px" alt=""> <span class="text-light"> Bloquer </span> </button>
+        </tr>
+
+      </table>
+     </div>
+    </div>
+  </div>
+
+</div>

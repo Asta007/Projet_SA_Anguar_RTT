@@ -1,0 +1,49 @@
+<div class="row">
+    <div style="padding:0px;" class="col-sm-3 col-lg-2">
+        <app-sidebar> </app-sidebar>
+    </div>
+  
+    <div class="nonesidebar col-sm-9 col-lg-10">
+      <div id="content-compte" class="">
+        <h3> List Utilisateurs <span class="small"> (system)</span> </h3>
+        <br>
+        <br>
+
+          <a id="btn_ajout" routerLink="/usersystemajout" class="text-info"> <img src="../../assets/img/add.png" width="25px" alt=""> Ajouter </a>
+          <p style="float:right;"> Totale : {{ usersystemlenght }}</p>
+    
+        <table id="table" class="table table-condensed table-striped table-bordered">
+          <tr>
+            <th> Id </th>
+            <th> nom </th>
+            <th> prenom </th>
+            <th> Telephone </th>
+            <th> Username </th>
+            <th> role </th>
+            <th> status </th>
+            <th> Action </th>
+          </tr>
+
+          <tr *ngFor="let oneusersystem of usersystemsdata">
+                <td> {{ oneusersystem.id }} </td>
+                <td> {{ oneusersystem.nom }} </td>
+                <td> {{ oneusersystem.prenom }} </td>
+                <td> {{ oneusersystem.telephone }} </td>
+                <td> {{ oneusersystem.username }} </td>
+                <td> {{ oneusersystem.roles }} </td>
+                <td *ngIf="oneusersystem.status === 'blked'"> <span class="oui text-danger"> Bloqué </span> </td>
+                <td *ngIf="oneusersystem.status === 'dblked'"> <span class="non text-success"> Actif </span> </td>
+                <td>
+                  <button *ngIf="oneusersystem.status === 'blked'" class="btn btn-success"> <img src="../../assets/img/stick.png" width="20px" alt=""> <span class="text-light"> Debloquer </span> </button>
+                  <button *ngIf="oneusersystem.status === 'dblked'" class="btn btn-danger"> <img src="../../assets/img/croi.png" width="20px" alt=""> <span class="text-light"> Bloquer </span> </button>
+                  
+                  <button *ngIf="oneusersystem.status === 'blcked'" class="btn btn-success"> <img src="../../assets/img/stick.png" width="20px" alt=""> <span class="text-light"> Debloquer </span> </button>
+                  <button *ngIf="oneusersystem.status === 'dblcked'" class="btn btn-danger"> <img src="../../assets/img/croi.png" width="20px" alt=""> <span class="text-light"> Bloquer </span> </button>
+                </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  
+  </div>

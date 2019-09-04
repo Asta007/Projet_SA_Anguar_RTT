@@ -1,0 +1,45 @@
+<div class="row">
+  <div style="padding:0px;" class="col-sm-3 col-lg-2">
+      <app-sidebar> </app-sidebar>
+  </div>
+
+  <div class="nonesidebar col-sm-9 col-lg-10">
+    <div id="content-compte" class="">
+      <h3> {{ onepartdata.denomination }} </h3>
+      <br>
+      <br>
+
+        <a routerLink="/listpartenaire" class="text-info"> Retour a la liste  </a>
+  
+      <table id="table" class="table table-condensed table-striped table-bordered">
+        <tr>
+          <th> Id </th>
+          <th> Matricule </th>
+          <th> Dénomination </th>
+          <th> Adress </th>
+          <th> Email </th>
+          <th> Telephone </th>
+          <th> Status </th>
+          <th> Action </th>
+        </tr>
+
+        <tr>
+          <td> {{onepartdata.id}} </td>
+          <td> {{onepartdata.matricule}} </td>
+          <td> {{onepartdata.denomination}} </td>
+          <td> {{onepartdata.adressePrest}} </td>
+          <td> {{onepartdata.emailPrest}} </td>
+          <td> {{onepartdata.contactePrest}} </td>
+          <td *ngIf="onepartdata.statusPrest === 'blked'"> <span class="text-danger"> Bloqué </span></td>
+          <td *ngIf="onepartdata.statusPrest === 'dblked'"> <span class="text-success"> Actif </span> </td>
+          <td>
+            <button *ngIf="onepartdata.statusPrest === 'blked'" class="mr-1 btn btn-success" (click)="deblock(onepartdata.id)"> <img src="../../assets/img/stick.png" width="20px" alt=""> <span class="text-light"> Debloquer </span>  </button>
+            <button *ngIf="onepartdata.statusPrest === 'dblked'" class="mr-1 btn btn-danger" (click)="block(onepartdata.id)"> <img src="../../assets/img/croi.png" width="20px" alt=""> <span class="text-light"> Bloquer </span> </button>
+          </td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+
+</div>
